@@ -1,0 +1,33 @@
+<div class="container-fluid" *ngIf="serieDetail">
+  <p class="h3 p-3">{{ serieDetail.name }}</p>
+  <div class="row">
+    <div class="col mb-4">
+      <div class="container">
+        <img
+          class="img-fluid"
+          src="{{ serieDetail.poster }}"
+          alt="{{ serieDetail.poster }}"
+        />
+      </div>
+    </div>
+    <div class="col mb-1">
+      <dl>
+
+        <dt>Hecha en el año:</dt>
+        <dd>{{ serieDetail.channel }}</dd>
+
+        <hr />
+
+        <dt>Descripcion;</dt>
+        <dd>{{ serieDetail.description }}</dd>
+
+        <hr />
+
+        <dt class="bold">Resultado</dt>
+        <dd class="caption">{{ serieDetail.webpage }}</dd>
+
+
+      </dl>
+    </div>
+  </div>
+</div>

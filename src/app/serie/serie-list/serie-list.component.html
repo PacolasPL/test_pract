@@ -1,0 +1,22 @@
+<div *ngIf="selected">
+  <app-serie-detail [serieDetail]="selectedSerie"></app-serie-detail>
+  <app-serie-detail></app-serie-detail>
+</div>
+
+ <hr />
+<div class="container">
+  <div class="row" >
+    <div class="col mb-2" *ngFor="let srs of series">
+          <div class="card p-2" style="width: 15rem; height: 17rem" (click)="onSelected(srs)">
+              <img
+              class="card-img-top"
+              src= "{{ srs.poster }}"
+              alt="{{ srs.name }}"/>
+              <div class="card-body">
+                <h5 class="card-title">{{ srs.name }} - {{srs.channel}}</h5>
+                  <p class="card-text">{{ srs.description.substring(0,48) }}</p>
+              </div>
+           </div>
+      </div>
+   </div>
+</div>
